@@ -1,165 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B Karthik Goud | ServiceNow Developer Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Karthik Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-[#0b132b] text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-slate-900">
- 
-    <header class="sticky top-0 z-50 bg-[#0b132b]/80 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-                <div class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></div>
-                <span class="font-mono text-sm tracking-widest text-emerald-400">DEV.KARTHIK_GOUD</span>
-            </div>
-            <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-400">
-                <a href="#about" class="hover:text-emerald-400 transition-colors">About</a>
-                <a href="#dashboard" class="hover:text-emerald-400 transition-colors">Instance Stats</a>
-                <a href="#projects" class="hover:text-emerald-400 transition-colors">Applications</a>
-                <a href="#skills" class="hover:text-emerald-400 transition-colors">Skill Matrix</a>
-            </nav>
-            <a href="#contact" class="px-4 py-2 border border-emerald-500/30 text-emerald-400 text-sm font-medium rounded-md hover:bg-emerald-500/10 transition-all">
-                gs.log('Connect')
-            </a>
-        </div>
-    </header>
- 
-    <section id="about" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 flex flex-col justify-center">
-        <p class="font-mono text-emerald-400 mb-3 text-sm tracking-wider">/* Welcome to my instance */</p>
-        <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-white mb-4">
-            B Karthik Goud
-        </h1>
-        <h2 class="text-2xl sm:text-4xl font-semibold text-slate-400 mb-6">
-            ServiceNow Developer & Automation Engineer
-        </h2>
-        <p class="max-w-2xl text-slate-400 text-lg mb-10 leading-relaxed">
-            I specialize in transforming enterprise complexity into streamlined, high-performance workflows. From writing advanced Server-Side Script Includes to engineering custom Service Portals, I program business efficiency.
-        </p>
-        <div class="flex flex-wrap gap-4">
-            <a href="#projects" class="px-6 py-3 bg-emerald-500 text-slate-900 font-semibold rounded-md hover:bg-emerald-400 transition-all shadow-lg shadow-emerald-500/20">
-                View Custom Apps
-            </a>
-            <a href="#contact" class="px-6 py-3 bg-slate-800 text-slate-200 font-semibold rounded-md border border-slate-700 hover:bg-slate-700 transition-all">
-                Submit a Request
-            </a>
-        </div>
-    </section>
- 
-    <section id="dashboard" class="bg-[#111c40] border-y border-slate-800 py-12">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 class="font-mono text-xs uppercase tracking-widest text-slate-500 mb-6"><i class="fa-solid fa-chart-simple mr-2"></i>Instance Performance Dashboard</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-[#0b132b] p-6 rounded-lg border border-slate-800">
-                    <div class="text-xs text-slate-400 uppercase font-medium mb-1">Certifications</div>
-                    <div class="text-2xl font-bold text-emerald-400 flex items-center gap-2">
-                        <span>CSA</span> <i class="fa-solid fa-badge-check text-sm text-blue-400"></i>
-                    </div>
-                    <div class="text-[11px] text-slate-500 mt-2 font-mono">ServiceNow Certified</div>
-                </div>
-                <div class="bg-[#0b132b] p-6 rounded-lg border border-slate-800">
-                    <div class="text-xs text-slate-400 uppercase font-medium mb-1">Configurations</div>
-                    <div class="text-2xl font-bold text-white">50+</div>
-                    <div class="text-[11px] text-slate-500 mt-2 font-mono">Client Scripts & Business Rules</div>
-                </div>
-                <div class="bg-[#0b132b] p-6 rounded-lg border border-slate-800">
-                    <div class="text-xs text-slate-400 uppercase font-medium mb-1">Custom Apps</div>
-                    <div class="text-2xl font-bold text-white">4+</div>
-                    <div class="text-[11px] text-slate-500 mt-2 font-mono">End-to-End Solutions</div>
-                </div>
-                <div class="bg-[#0b132b] p-6 rounded-lg border border-slate-800">
-                    <div class="text-xs text-slate-400 uppercase font-medium mb-1">System Uptime</div>
-                    <div class="text-2xl font-bold text-emerald-400">99.9%</div>
-                    <div class="text-[11px] text-slate-500 mt-2 font-mono">Code Efficiency Rate</div>
-                </div>
-            </div>
-        </div>
-    </section>
- 
-    <section id="projects" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div class="mb-12">
-            <h2 class="text-3xl font-bold text-white mb-2">Developed Applications</h2>
-            <p class="text-slate-400">Custom scopes, automation pipelines, and core architecture built within ServiceNow.</p>
-        </div>
- 
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-[#111c40]/50 border border-slate-800 rounded-xl p-6 hover:border-emerald-500/40 transition-all flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center justify-between mb-4">
-                        <i class="fa-solid fa-train text-2xl text-emerald-400"></i>
-                        <span class="text-[10px] font-mono px-2 py-1 bg-emerald-500/10 text-emerald-400 rounded">Custom Scope</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">IRCTC Train Booking App</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                        Engineered an end-to-end booking database architecture directly inside ServiceNow. Built out relational tables, custom schedules, and automated state transitions.
-                    </p>
-                </div>
-                <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800 font-mono text-[11px] text-slate-400">
-                    <span>Flow Designer</span> • <span>Service Portal</span> • <span>Script Includes</span>
-                </div>
-            </div>
- 
-            <div class="bg-[#111c40]/50 border border-slate-800 rounded-xl p-6 hover:border-emerald-500/40 transition-all flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center justify-between mb-4">
-                        <i class="fa-solid fa-id-card-clip text-2xl text-emerald-400"></i>
-                        <span class="text-[10px] font-mono px-2 py-1 bg-emerald-500/10 text-emerald-400 rounded">FSM Module</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Field Engineer Attendance Tracker</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                        Designed a mobile-responsive intake form updating parent Work Order Tasks instantly. Tracks on-site check-ins dynamically via GlideRecord scripting.
-                    </p>
-                </div>
-                <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800 font-mono text-[11px] text-slate-400">
-                    <span>Client Scripts</span> • <span>UI Policies</span> • <span>Work Management</span>
-                </div>
-            </div>
- 
-            <div class="bg-[#111c40]/50 border border-slate-800 rounded-xl p-6 hover:border-emerald-500/40 transition-all flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center justify-between mb-4">
-                        <i class="fa-solid fa-file-signature text-2xl text-emerald-400"></i>
-                        <span class="text-[10px] font-mono px-2 py-1 bg-emerald-500/10 text-emerald-400 rounded">Core Platform</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Sign-Off & Refer Back Engine</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                        Developed complex task state actions. Integrated native PDFGenerationAPI and GlideSysAttachment to systematically attach signed-off work validation records.
-                    </p>
-                </div>
-                <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800 font-mono text-[11px] text-slate-400">
-                    <span>Server Scripting</span> • <span>UI Actions</span> • <span>PDF API</span>
-                </div>
-            </div>
-        </div>
-    </section>
- 
-    <section id="skills" class="bg-[#111c40]/30 border-t border-slate-800 py-20">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-12">
-                <h2 class="text-3xl font-bold text-white mb-2">Skill Matrix</h2>
-                <p class="text-slate-400">My enterprise technology stack and system core configurations.</p>
-            </div>
- 
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="space-y-3">
-                    <h4 class="text-emerald-400 font-mono text-sm tracking-wider">// PLATFORM CORE</h4>
-                    <ul class="space-y-2 text-slate-300 text-sm">
-                        <li><i class="fa-solid fa-chevron-right text-xs text-emerald-500/50 mr-2"></i> Business Rules & Client Scripts</li>
-                        <li><i class="fa-solid fa-chevron-right text-xs text-emerald-500/50 mr-2"></i> UI Actions & UI Policies</li>
-                        <li><i class="fa-solid fa-chevron-right text-xs text-emerald-500/50 mr-2"></i> Script Includes & Glide classes</li>
-                        <li><i class="fa-solid fa-chevron-right text-xs text-emerald-500/50 mr-2"></i> Flow Designer & Workflow Engine</li>
-                    </ul>
-                </div>
-                <div class="space-y-3">
-                    <h4 class="text-emerald-400 font-mono text-sm tracking-wider">// MODULES & UI</h4>
-                    <ul class="space-y-2 text-slate-300 text-sm">
-                        <li><i class="fa-solid fa-chevron-right text-xs text-emerald-500/50 mr-2"></i> ITSM & Field Service Management (FSM)</li>
-                        <li><i class="fa-solid fa-chevron-right text-xs text-emerald-500/50 mr-2"></i> Service Portal & Custom Widgets</li>
-                        <li><i class="fa-solid fa-chevron-right text-xs text-emerald-500/50 mr-2"></i> Service Catalog Configuration</li>
-                        <li><i class="fa-solid fa-chevron-right text-xs text-emerald-500/50 mr-2"></i> Jelly Scripting & UI Pages</li>
-                    </ul>
-                </div>
-                <div class="space-y-3">
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h2>Karthik</h2>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Hello, I'm Karthik</h1>
+    <p>Full Stack Developer | Analyst</p>
+    <button onclick="scrollToProjects()">View Work</button>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I build modern web applications and work with ServiceNow & automation.</p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Project One</h3>
+        <p>Short description</p>
+      </div>
+      <div class="card">
+        <h3>Project Two</h3>
+        <p>Short description</p>
+      </div>
+      <div class="card">
+        <h3>Project Three</h3>
+        <p>Short description</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: your@email.com</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+``
