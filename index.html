@@ -1,73 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karthik Portfolio</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Core // Initializing</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @keyframes scanline {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+        .scanline::after {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+        .matrix-glow {
+            text-shadow: 0 0 12px rgba(168, 85, 247, 0.4);
+        }
+    </style>
 </head>
+<body class="bg-[#030303] text-purple-100 font-mono min-h-screen flex flex-col justify-between p-4 md:p-8 overflow-x-hidden scanline selection:bg-purple-500 selection:text-black">
 
-<body>
+    <div class="absolute inset-0 opacity-20 pointer-events-none mix-blend-screen bg-[linear-gradient(to_right,#1f1a3a_1px,transparent_1px),linear-gradient(to_bottom,#1f1a3a_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[120px] pointer-events-none animate-pulse"></div>
 
-  <!-- Navbar -->
-  <nav>
-    <h2>Karthik</h2>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <header class="w-full flex justify-between items-center z-10 border-b border-purple-950/40 pb-4">
+        <div class="flex items-center space-x-3">
+            <div class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-purple-500"></span>
+            </div>
+            <span class="text-xs tracking-[0.2em] text-purple-400 font-bold">MODEL_NAME // COGNITIVE_V1</span>
+        </div>
+        <div id="sync-rate" class="text-[10px] text-purple-500 tracking-wider">
+            SYNCHRONIZING: 0.00%
+        </div>
+    </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Hello, I'm Karthik</h1>
-    <p>Full Stack Developer | Analyst</p>
-    <button onclick="scrollToProjects()">View Work</button>
-  </section>
+    <main class="max-w-3xl mx-auto w-full flex flex-col justify-center items-stretch my-auto z-10 space-y-6 py-12">
+        
+        <div class="inline-flex self-start items-center space-x-2 bg-purple-950/30 border border-purple-900/50 px-3 py-1 rounded-full text-xs text-purple-300">
+            <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+            <span>Neural Network Training Stage 4/5</span>
+        </div>
 
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I build modern web applications and work with ServiceNow,
-      automation, and IT solutions.
-    </p>
-  </section>
+        <div class="space-y-1">
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tighter text-white matrix-glow">
+                AWAKENING <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-400 to-cyan-400">IN PROGRESS</span>.
+            </h1>
+            <p class="text-xs text-purple-400/70 uppercase tracking-widest">// Quantizing weights, mapping semantic matrix</p>
+        </div>
 
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
+        <div class="w-full bg-black/60 border border-purple-900/40 rounded-xl p-5 shadow-2xl shadow-purple-950/20 backdrop-blur-md">
+            <div class="flex justify-between items-center border-b border-purple-950 pb-3 mb-4 text-xs text-purple-500">
+                <span class="flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-purple-500/40"></span> core_monitor.log
+                </span>
+                <span id="system-epoch">EPOCH: 00/100</span>
+            </div>
+            
+            <div class="space-y-2 min-h-[110px] text-xs md:text-sm select-none">
+                <p class="text-purple-400/60 font-light">&gt; <span id="ai-thought-stream">Booting thought protocols...</span></p>
+                <div class="w-full bg-purple-950/20 h-1 rounded overflow-hidden mt-4">
+                    <div id="ai-progress-bar" class="bg-gradient-to-r from-purple-500 to-fuchsia-500 h-full w-[12%] transition-all duration-300"></div>
+                </div>
+            </div>
+        </div>
 
-    <div class="cards">
-      <div class="card">
-        <h3>Project One</h3>
-        <p>ServiceNow workflow automation</p>
-      </div>
+        <p class="text-sm text-purple-200/80 max-w-xl font-light leading-relaxed">
+            We are engineering a privacy-first, highly contextual intelligence layer designed to integrate with your existing codebase. No bloat. Just pure machine capability.
+        </p>
 
-      <div class="card">
-        <h3>Project Two</h3>
-        <p>Full stack web application</p>
-      </div>
+        <div class="w-full max-w-md pt-2">
+            <form class="flex gap-2" onsubmit="event.preventDefault(); alert('Telemetry logged. Your endpoint will be notified upon model deployment.');">
+                <input type="email" required placeholder="your_api_endpoint@email.com" 
+                       class="flex-1 bg-purple-950/20 border border-purple-900/60 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-purple-400 focus:ring-1 focus:ring-purple-400 transition-all text-purple-100 placeholder:text-purple-700">
+                <button type="submit" 
+                        class="bg-purple-600 text-white hover:bg-purple-500 font-medium text-sm px-5 py-3 rounded-lg transition-all cursor-pointer shadow-lg shadow-purple-950/50">
+                    Request API Access
+                </button>
+            </form>
+        </div>
 
-      <div class="card">
-        <h3>Project Three</h3>
-        <p>Dashboard & data analytics</p>
-      </div>
-    </div>
+    </main>
 
-  </section>
+    <footer class="w-full flex flex-col md:flex-row justify-between items-center gap-4 border-t border-purple-950/30 pt-4 z-10 text-[11px] text-purple-600 tracking-wider">
+        <div class="flex items-center gap-6">
+            <span>LATENCY: <span id="ping-ms" class="text-purple-400">24ms</span></span>
+            <span>SHARDS: <span class="text-purple-400">ONLINE</span></span>
+        </div>
+        <div class="flex space-x-6">
+            <a href="#" class="hover:text-purple-300 transition-colors">DOCS</a>
+            <a href="#" class="hover:text-purple-300 transition-colors">GITHUB</a>
+            <a href="#" class="hover:text-purple-300 transition-colors">X_FEED</a>
+        </div>
+    </footer>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
-  </section>
+    <script>
+        // Simulation Array: What an AI might say while generating/training
+        const aiLogs = [
+            "Initializing deep neural weights...",
+            "Analyzing vector space embeddings...",
+            "Optimizing token generation paths [Top-P = 0.9]...",
+            "Running alignment algorithms against target manifest...",
+            "Compiling syntax parser for autonomous action...",
+            "Refining contextual attention matrices...",
+            "Caching runtime components. System stability nominal."
+        ];
 
-  <!-- JS -->
-  <script src="script.js"></script>
+        let currentLogIndex = 0;
+        const thoughtStream = document.getElementById("ai-thought-stream");
+        const progressBar = document.getElementById("ai-progress-bar");
+        const epochDisplay = document.getElementById("system-epoch");
+        const syncRate = document.getElementById("sync-rate");
 
+        // 1. Cycle Simulated Thoughts
+        function updateAIThinking() {
+            thoughtStream.style.opacity = 0;
+            setTimeout(() => {
+                thoughtStream.innerText = aiLogs[currentLogIndex];
+                thoughtStream.style.opacity = 1;
+                currentLogIndex = (currentLogIndex + 1) % aiLogs.length;
+            }, 300);
+        }
+        setInterval(updateAIThinking, 4000);
+        updateAIThinking();
+
+        // 2. Increment Synthetic Training Telemetry
+        let percentage = 12.4;
+        let epoch = 42;
+        function leakTelemetry() {
+            if (percentage < 99.1) {
+                percentage += (Math.random() * 0.4);
+                if (Math.random() > 0.85) epoch++;
+            }
+            
+            syncRate.innerText = `SYNCHRONIZING: ${percentage.toFixed(2)}%`;
+            epochDisplay.innerText = `EPOCH: ${epoch}/100`;
+            progressBar.style.width = `${percentage}%`;
+            
+            // Randomize Latency Display slightly for realism
+            document.getElementById("ping-ms").innerText = `${Math.floor(Math.random() * 12) + 18}ms`;
+        }
+        setInterval(leakTelemetry, 1200);
+    </script>
 </body>
 </html>
