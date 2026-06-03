@@ -10,30 +10,30 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         @keyframes pulse-slow {
-            0%, 100% { opacity: 0.4; transform: scale(1); }
-            50% { opacity: 0.8; transform: scale(1.05); }
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.08); }
         }
         .animate-pulse-slow {
             animation: pulse-slow 8s infinite ease-in-out;
         }
         .bg-grid {
-            background-size: 40px 40px;
+            background-size: 50px 50px;
             background-image: 
-                linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+                linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
         }
         .glass {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
         }
     </style>
 </head>
 <body class="bg-[#030712] text-gray-100 font-sans min-h-screen flex flex-col justify-between overflow-x-hidden relative bg-grid">
 
-    <!-- AI Cyber Glow Background Effect -->
-    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-r flow-from-cyan-500 to-fuchsia-500 rounded-full blur-[120px] opacity-40 pointer-events-none animate-pulse-slow"></div>
+    <!-- AI Cyber Glow Background Effects -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-cyan-500/30 to-fuchsia-500/30 rounded-full blur-[130px] pointer-events-none animate-pulse-slow"></div>
 
     <!-- Header / Navbar -->
     <header class="w-full max-w-7xl mx-auto px-6 py-6 flex justify-between items-center z-10">
@@ -46,15 +46,17 @@
         </a>
     </header>
 
-    <!-- Main Content -->
-    <main class="flex-grow flex flex-col items-center justify-center px-4 text-center z-10 my-12">
-        <!-- Status Badge -->
-        <div class="inline-flex items-center gap-2 glass px-4 py-1.5 rounded-full text-xs font-medium tracking-wide text-cyan-400 mb-6 border-cyan-500/20 shadow-[0_0_15px_rgba(34,211,238,0.1)]">
-            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
-            NEURAL NETWORK INITIALIZING
+    <!-- Main Content Area -->
+    <main class="flex-grow flex flex-col items-center justify-center px-4 text-center z-10 my-8">
+        
+        <!-- Leadership / Chairman Badge -->
+        <div class="inline-flex items-center gap-2 glass px-4 py-2 rounded-full text-xs font-medium tracking-wide border-white/10 mb-6 backdrop-blur-md">
+            <i data-lucide="shield-check" class="w-4 h-4 text-fuchsia-400"></i>
+            <span class="text-gray-400">Under the Leadership of Chairman</span> 
+            <span class="text-white font-semibold bg-gradient-to-r from-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">B. Karthik Goud</span>
         </div>
 
-        <!-- Heading -->
+        <!-- Main Heading -->
         <h1 class="text-4xl md:text-7xl font-extrabold tracking-tight max-w-4xl mx-auto leading-tight">
             The Next Evolution of <br>
             <span class="bg-gradient-to-r from-cyan-400 via-indigo-400 to-fuchsia-500 bg-clip-text text-transparent">
@@ -62,12 +64,12 @@
             </span>
         </h1>
         
-        <p class="mt-6 text-gray-400 max-w-xl text-base md:text-lg logic-prose">
-            We are building an autonomous AI ecosystem designed to accelerate your workflow. Zero prompts. Infinite possibilities.
+        <p class="mt-6 text-gray-400 max-w-xl text-base md:text-lg">
+            An autonomous AI ecosystem designed to accelerate enterprise workflows. Zero prompts. Infinite structural possibilities.
         </p>
 
         <!-- Countdown Timer -->
-        <div class="grid grid-cols-4 gap-3 md:gap-6 my-10 max-w-md w-full">
+        <div class="grid grid-cols-4 gap-3 md:gap-6 my-8 max-w-md w-full">
             <div class="glass p-3 md:p-4 rounded-2xl">
                 <div id="days" class="text-2xl md:text-4xl font-bold text-white">00</div>
                 <div class="text-[10px] md:text-xs uppercase tracking-widest text-gray-500 mt-1">Days</div>
@@ -86,27 +88,50 @@
             </div>
         </div>
 
-        <!-- Email Notify Input -->
-        <form class="w-full max-w-md flex flex-col sm:flex-row gap-2 p-1.5 glass rounded-2xl sm:rounded-full focus-within:border-cyan-500/50 transition-all duration-300">
+        <!-- Email Notify Form -->
+        <form class="w-full max-w-md flex flex-col sm:flex-row gap-2 p-1.5 glass rounded-2xl sm:rounded-full focus-within:border-cyan-500/50 transition-all duration-300 mb-16">
             <input 
                 type="email" 
-                placeholder="Enter your email for early beta access" 
+                placeholder="Enter your corporate email for beta access" 
                 required
-                class="bg-transparent px-4 py-3 text-sm text-white focus:outline-none flex-grow placeholder-gray-500 rounded-full"
+                class="bg-transparent px-5 py-3 text-sm text-white focus:outline-none flex-grow placeholder-gray-500 rounded-full"
             >
             <button type="submit" class="bg-gradient-to-r from-cyan-500 to-indigo-500 hover:from-cyan-400 hover:to-indigo-400 text-gray-950 font-semibold px-6 py-3 rounded-xl sm:rounded-full text-sm transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(34,211,238,0.3)]">
-                Notify Me <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                Request Access <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </button>
         </form>
+
+        <!-- Partners / Powered By Section -->
+        <div class="w-full max-w-5xl mx-auto border-t border-white/5 pt-8 px-4">
+            <p class="text-xs font-semibold tracking-widest text-gray-500 uppercase mb-6">Strategic Partners & Powered By</p>
+            <div class="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <!-- Partner 1 -->
+                <div class="flex items-center gap-2 font-bold text-sm tracking-wider text-gray-300">
+                    <i data-lucide="blocks" class="w-5 h-5 text-cyan-400"></i> NVIDIA INCEPTION
+                </div>
+                <!-- Partner 2 -->
+                <div class="flex items-center gap-2 font-bold text-sm tracking-wider text-gray-300">
+                    <i data-lucide="database" class="w-5 h-5 text-indigo-400"></i> SUPABASE
+                </div>
+                <!-- Partner 3 -->
+                <div class="flex items-center gap-2 font-bold text-sm tracking-wider text-gray-300">
+                    <i data-lucide="triangle" class="w-5 h-5 text-white"></i> VERCEL
+                </div>
+                <!-- Partner 4 -->
+                <div class="flex items-center gap-2 font-bold text-sm tracking-wider text-gray-300">
+                    <i data-lucide="cloud-lightning" class="w-5 h-5 text-fuchsia-400"></i> AWS CLOUD
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
     <footer class="w-full max-w-7xl mx-auto px-6 py-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-500 border-t border-white/5 z-10">
-        <div>&copy; 2026 Nexus.AI. Built for the decentralized web.</div>
+        <div>&copy; 2026 Nexus.AI. All operations orchestrated under the corporate office of B. Karthik Goud.</div>
         <div class="flex gap-6">
             <a href="#" class="hover:text-cyan-400 transition-colors">Twitter / X</a>
             <a href="#" class="hover:text-cyan-400 transition-colors">Discord</a>
-            <a href="#" class="hover:text-cyan-400 transition-colors">Documentation</a>
+            <a href="#" class="hover:text-cyan-400 transition-colors">Privacy Policy</a>
         </div>
     </footer>
 
